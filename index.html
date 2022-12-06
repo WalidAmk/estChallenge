@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="ecoleContainer">
+            <div id="ecoleBox">
+                <label for="ecoleInput">Ecole</label>
+                <input type="text" name="ecoleInput" id="ecoleInput" value="">
+                <button onclick="ajouterEcole()">Ajouter Ecole</button>
+            </div>
+        </div>
+        <div id="etudiantContainer">
+            <div class="inputBox">
+                <label for="nomInput">Nom</label>
+                <input type="text" id="nomInput" required>
+            </div>
+            <div class="inputBox">
+                <label for="prenomInput">Prenom</label>
+                <input type="text" id="prenomInput">
+            </div>
+            <div class="inputBox">
+                <label for="">Filiére</label>
+                <div id="filiereOptions">
+                    <label for="filiere">GI</label>
+                    <input type="radio" name="filiere" value="GI">
+                    <label for="filiere">SIR</label>
+                    <input type="radio" name="filiere" value="SIR">
+                </div>
+            </div>
+            <select name="ecoleOptions" id="ecoleOptions">
+
+            </select>
+            <div id="buttonBox">
+                <button onclick="ajouterEtudiant()">Ajouter Etudiant</button>
+                <div id="subButtonBox">
+                    <button onclick="vide()">vide</button>
+                    <button onclick="supprimer()">Supprimer</button>
+                </div>
+                <button onclick="afficherTaille()">Afficher taille</button>
+            </div>
+            <div id="dataDisplay">
+                <div id="etudiantDataBox">
+                    <ol id="etudiantList">
+                        
+                    </ol>
+                </div>
+                <p>Le nombre d'etudiant dans le tableau est : <span id="nombreEtudiant"></span></p> 
+            </div>
+        </div>
+        <div id="msgEcoleBox">
+            <p id="msgEcole"></p>
+        </div>
+    </div>
+</body>
+</html>
